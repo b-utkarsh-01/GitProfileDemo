@@ -5,106 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub User Profile - Search & Skeleton</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    </head>
+</head>
 <body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center p-4">
 
-   <body class="bg-gray-900 min-h-screen flex flex-col items-center p-4">
-
-    <form action="/search-github-user" method="GET" class="w-full max-w-4xl mb-8">
-        <div class="flex items-center bg-gray-800 rounded-lg p-3 shadow-2xl">
+    <div class="w-full max-w-4xl mb-8">
+        <div class=" flex items-center bg-gray-800 rounded-lg p-3 shadow-2xl">
             <svg class="w-6 h-6 text-indigo-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             
             <input 
                 type="text" 
-                name="username" 
                 placeholder="Enter GitHub Username (e.g., torvalds)" 
-                value="torvalds"
-                class="flex-grow bg-transparent text-white placeholder-gray-500 text-lg border-none focus:outline-none py-1"
+                class="userProfileID flex-grow bg-transparent text-white placeholder-gray-500 text-lg border-none focus:outline-none py-1"
                 required
             >
             
-            <button 
-                type="submit" 
-                class="ml-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105"
-            >
+            <button class="searchProfile ml-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105">
                 Search
             </button>
         </div>
-    </form>
+    </div>
     
     <div class="w-full max-w-4xl">
-        <div class="profile-card bg-gray-800 rounded-xl overflow-hidden w-full md:flex shadow-2xl">
-
-            <div class="p-8 bg-indigo-900 text-white flex flex-col items-center justify-center md:w-2/5">
-                
-                <div class="w-32 h-32 mb-4 rounded-full border-4 border-indigo-400 overflow-hidden">
-                    <img src="https://avatars.githubusercontent.com/u/1024025?v=4" alt="Linus Torvalds Avatar" class="w-full h-full object-cover">
-                </div>
-                
-                <h1 class="text-3xl font-bold mb-1 text-center text-white">
-                    Linus Torvalds
-                </h1>
-                
-                <p class="text-indigo-300 text-lg">
-                    @torvalds
-                </p>
-                
-                <a href="https://github.com/torvalds" target="_blank" class="mt-4 inline-block bg-indigo-400 text-indigo-900 font-semibold py-2 px-6 rounded-full hover:bg-indigo-300 transition duration-300">
-                    View GitHub
-                </a>
-            </div>
-
-            <div class="p-8 md:w-3/5 text-white">
-                
-                <h2 class="text-2xl font-semibold text-indigo-400 mb-4 border-b border-gray-700 pb-2">
-                    User Details 💻
-                </h2>
-                
-                <p class="text-gray-400 mb-6 italic">
-                    "Creator of Linux and Git. Just another coder trying to make things better."
-                </p>
-
-                <div class="grid grid-cols-2 gap-4 text-center">
-                    
-                    <div class="bg-gray-700 p-4 rounded-lg border-l-4 border-indigo-500">
-                        <p class="text-3xl font-extrabold text-indigo-400">
-                            195K
-                        </p>
-                        <p class="text-sm font-medium text-gray-400">Followers</p>
-                    </div>
-                    
-                    <div class="bg-gray-700 p-4 rounded-lg border-l-4 border-indigo-500">
-                        <p class="text-3xl font-extrabold text-indigo-400">
-                            0
-                        </p>
-                        <p class="text-sm font-medium text-gray-400">Following</p>
-                    </div>
-                    
-                    <div class="bg-gray-700 p-4 rounded-lg border-l-4 border-indigo-500">
-                        <p class="text-3xl font-extrabold text-indigo-400">
-                            17
-                        </p>
-                        <p class="text-sm font-medium text-gray-400">Repositories</p>
-                    </div>
-                    
-                    <div class="bg-gray-700 p-4 rounded-lg border-l-4 border-indigo-500">
-                        <p class="text-lg font-bold text-white break-words">
-                            Portland, OR
-                        </p>
-                        <p class="text-sm font-medium text-gray-400">Location</p>
-                    </div>
-                </div>
-                
-                <div class="mt-6 text-center">
-                    <a href="https://www.linuxfoundation.org/" target="_blank" class="text-indigo-400 hover:text-indigo-300 font-medium flex items-center justify-center">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                        Linux Foundation
-                    </a>
-                </div>
-
-            </div>
-
+        <div class="profileCard bg-gray-800 rounded-xl overflow-hidden w-full md:flex shadow-2xl">
         </div>
     </div>
+        <script src="./script.js"></script>
+    
     </body>
 </html>
