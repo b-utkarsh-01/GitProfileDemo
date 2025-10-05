@@ -34,7 +34,7 @@ function displayData(details) {
 
                 <a href="mailto:${details.email}" target="_blank" class="mt-4 inline-block  font-semibold py-2 px-6  hover:text-indigo-300 transition duration-300">
                     Email
-                </a></div>` : `<a href="${details.url}" target="_blank" class="mt-4 inline-block bg-indigo-400 text-indigo-900 font-semibold py-2 px-6 rounded-full hover:bg-indigo-300 transition duration-300">
+                </a></div>` : `<a href="${details.html_url}" target="_blank" class="mt-4 inline-block bg-indigo-400 text-indigo-900 font-semibold py-2 px-6 rounded-full hover:bg-indigo-300 transition duration-300">
                     View GitHub
                 </a>`}
             </div>
@@ -87,8 +87,6 @@ function displayData(details) {
 
 searchProfile.addEventListener("click", () => {
     let userName = userProfileID.value.trim();
-    console.warn(userName);
-
     if (userName.length > 0) {
         getProfileData(userName)
             .then(
