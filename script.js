@@ -12,13 +12,15 @@ function getProfileData(profileName) {
 }
 
 function displayData(details) {
+  console.log(details);
+  
     let data =
-        `<div class="p-8 bg-indigo-900 text-white flex flex-col items-center justify-center md:w-2/5">
-                
-                <div class="w-32 h-32 mb-4 rounded-full border-4 border-indigo-400 overflow-hidden animate-pulse">
-                    <img src="${details.avatar_url}" alt="${details.name} avtar" class="w-full h-full object-cover">
+        `<div class="bg-indigo-900 text-white flex flex-col items-center justify-center md:w-2/5">
+                <div class="w-32 h-32 mb-4 rounded-full border-4 border-indigo-400 overflow-hidden p-2 animate-pulse">
+                  <img src="${details.avatar_url}" 
+                    alt="${details.name || details.login}'s avatar" 
+                    class="w-full h-full object-cover rounded-full">
                 </div>
-                
                 <h1 class="text-3xl font-bold mb-1 text-center text-white">
                     ${details.name}
                 </h1>
@@ -28,17 +30,17 @@ function displayData(details) {
                 </p>
                 
                 
-                ${details.emai ? `<div class="flex items-center justify-between w-full"><a href="${details.html_url}" target="_blank" class="mt-4 inline-block bg-indigo-400 text-indigo-900 font-semibold py-2 px-6 rounded-full hover:bg-indigo-300 transition duration-300">
+                ${details.email ? `<div class="flex items-center justify-between w-full"><a href="https://github.com/${details.login}" target="_blank" class="mt-4 inline-block bg-indigo-400 text-indigo-900 font-semibold py-2 px-6 rounded-full hover:bg-indigo-300 transition duration-300">
                     View GitHub
                 </a>
 
                 <a href="mailto:${details.email}" target="_blank" class="mt-4 inline-block  font-semibold py-2 px-6  hover:text-indigo-300 transition duration-300">
                     Email
-                </a></div>` : `<a href="${details.url}" target="_blank" class="mt-4 inline-block bg-indigo-400 text-indigo-900 font-semibold py-2 px-6 rounded-full hover:bg-indigo-300 transition duration-300">
+                </a></div>` : `<a href="https://github.com/${details.login}" target="_blank" class="mt-4 inline-block bg-indigo-400 text-indigo-900 font-semibold py-2 px-6 rounded-full hover:bg-indigo-300 transition duration-300">
                     View GitHub
                 </a>`}
             </div>
-
+                  
             <div class="p-8 md:w-3/5 text-white">
                 
                 <h2 class="text-2xl font-semibold text-indigo-400 mb-4 border-b border-gray-700 pb-2">
